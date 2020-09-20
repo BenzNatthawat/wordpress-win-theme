@@ -40,3 +40,8 @@ footer .site-info {
 .post, .page {
   margin: 0px;
 }
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
