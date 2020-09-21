@@ -53,7 +53,7 @@
     </div>
 
     <?php 
-      if(!preg_match("/สมัครสมาชิก/", urldecode($_SERVER['REQUEST_URI'])))
+      if(!is_404() && !preg_match("/สมัครสมาชิก/", urldecode($_SERVER['REQUEST_URI'])))
         echo do_shortcode('[twabc-carousel]');
      ?>
 
