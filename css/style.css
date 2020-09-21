@@ -1,13 +1,13 @@
+body * {
+  font-family: 'Kanit', sans-serif;
+}
+
 nav .custom-logo-link .custom-logo {
   width: 50px;
 }
 
 nav {
   background: rgba(158, 0, 0, 0.801);
-}
-
-nav ul.nav {
-  width: 100%;
 }
 
 nav ul.nav a {
@@ -37,11 +37,18 @@ footer .site-info {
   font-size: 1.2em;
 }
 
-.post, .page {
+.post,
+.page {
   margin: 0px;
 }
 
-.navbar {
+nav.navbar {
   border-radius: 0;
   margin-bottom: 0;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+  text-decoration: none !important;
+  background-color: unset !important;
 }
