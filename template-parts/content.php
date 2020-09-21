@@ -13,6 +13,19 @@
 
 	<?php underscores_post_thumbnail(); ?>
 
+  <ul class="pages-list">
+           <?php $our_pages = get_pages($args); ?>
+           <?php if (!empty($our_pages)): ?>
+            <?php foreach ($our_pages as $key => $page_item): ?>
+              <li>
+                <?php echo get_post_thumbnail_id( $page->ID ) ?>
+                <a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>"><?php echo $page_item->post_title ; ?></a>
+                <?php echo get_the_post_thumbnail($page_item->ID,'thumbnail'); ?>
+              </li>
+            <?php endforeach ?>
+           <?php endif ?>
+           </ul>
+
 	<div class="entry-content">
 		<?php
 		the_content(
