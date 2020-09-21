@@ -52,6 +52,9 @@
       </nav>
     </div>
 
-    <?php echo do_shortcode('[twabc-carousel]'); ?>
+    <?php 
+      if(!preg_match("/สมัครสมาชิก/", urldecode($_SERVER['REQUEST_URI'])))
+        echo do_shortcode('[twabc-carousel]');
+     ?>
 
 	</header><!-- #masthead -->
