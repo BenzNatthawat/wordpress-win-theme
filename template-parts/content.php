@@ -13,19 +13,6 @@
 
 	<?php underscores_post_thumbnail(); ?>
 
-  <ul class="pages-list">
-           <?php $our_pages = get_pages($args); ?>
-           <?php if (!empty($our_pages)): ?>
-            <?php foreach ($our_pages as $key => $page_item): ?>
-              <li>
-                <?php echo get_post_thumbnail_id( $page->ID ) ?>
-                <a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>"><?php echo $page_item->post_title ; ?></a>
-                <?php echo get_the_post_thumbnail($page_item->ID,'thumbnail'); ?>
-              </li>
-            <?php endforeach ?>
-           <?php endif ?>
-           </ul>
-
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -51,6 +38,26 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+
+	<div class="row pages-index">
+		<?php $our_pages = get_pages($args); ?>
+		<?php if (!empty($our_pages)): ?>
+		<?php foreach ($our_pages as $key => $page_item): ?>
+			<?php if(!$page_item->menu_order) { ?>
+				<div class="col col-md-4 col-sm-6">
+					<a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>">
+						<div>
+							<?php echo get_the_post_thumbnail($page_item->ID,'thumbnail'); ?>
+						</div>
+						<div>
+							<?php echo $page_item->post_title ; ?>
+						</div>
+					</a>
+				</div>
+			<?php } ?>
+		<?php endforeach ?>
+		<?php endif ?>
+	</div>
 
 	<!-- <footer class="entry-footer">
 		<?php underscores_entry_footer(); ?>
