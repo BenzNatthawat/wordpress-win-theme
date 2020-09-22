@@ -5,11 +5,38 @@ body * {
 
 nav .custom-logo-link .custom-logo {
   width: 50px;
+  animation: jiggle 2s ease-in infinite;
+}
+
+@keyframes jiggle {
+  39% {
+    transform: scale(1.0, 1.0)
+  }
+
+  46% {
+    transform: scale(1.2, 0.8)
+  }
+
+  56% {
+    transform: scale(0.9, 1.1) translate(0, -2px)
+  }
+
+  63% {
+    transform: scale(1.0, 0.8) translate(0, -3px)
+  }
+
+  71% {
+    transform: scale(0.9, 1.0) translate(0, -4px)
+  }
+
+  81% {
+    transform: scale(1.0, 1.0)
+  }
 }
 
 nav {
   border-bottom: 3px solid #400c03 !important;
-  background-image: linear-gradient(to bottom, rgba(169,30,15,1) 0%, rgba(96,9,0,1) 100%);
+  background-image: linear-gradient(to bottom, rgba(169, 30, 15, 1) 0%, rgba(96, 9, 0, 1) 100%);
 }
 
 nav ul.nav a {
@@ -19,7 +46,7 @@ nav ul.nav a {
 }
 
 footer {
-  background-image: linear-gradient(to bottom, rgba(169,30,15,1) 0%, rgba(96,9,0,1) 100%);
+  background-image: linear-gradient(to bottom, rgba(169, 30, 15, 1) 0%, rgba(96, 9, 0, 1) 100%);
   padding: 30px;
 }
 
@@ -28,7 +55,7 @@ a {
 }
 
 .site-main .container {
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 50px 50px;
 }
 
@@ -71,10 +98,27 @@ nav.navbar {
   margin-top: 30px;
 }
 
-.pages-index img{
+.pages-index .page-index {
+  padding: 6px;
+}
+
+.pages-index .page-index .page-index-border {
+  border: 1px solid rgba(255, 193, 7, .125);
+  box-shadow: 4px 4px rgba(255, 193, 7, 0.22);
+  border-radius: .85rem;
+}
+
+.pages-index .page-index .images img {
   width: 100%;
   height: 100%;
+  border-radius: .85rem;
 }
+
+.pages-index .page-index .title {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 
 .pages-index .col {
   margin-top: 12px;
@@ -85,6 +129,31 @@ article {
   font-size: 1.3em;
 }
 
-.page-content, .entry-content, .entry-summary {
+.page-content,
+.entry-content,
+.entry-summary {
   margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav .navbar-collapse.show ul {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  nav .navbar-collapse ul {
+    display: none;
+  }
+
+  nav.navbar a {
+    margin-left: 10%;
+  }
+}
+
+nav button:focus {
+  outline: unset;
+}
+
+.collapse:not(.show) {
+  display: block;
 }

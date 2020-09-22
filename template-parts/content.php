@@ -39,18 +39,28 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<div class="row pages-index">
+	<div class="row pages-index gutter-2">
 		<?php $our_pages = get_pages($args); ?>
 		<?php if (!empty($our_pages)): ?>
 		<?php foreach ($our_pages as $key => $page_item): ?>
 			<?php if(!$page_item->menu_order) { ?>
-				<div class="col col-md-4 col-sm-6">
-					<a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>">
-						<div>
-							<?php echo get_the_post_thumbnail($page_item->ID,'thumbnail'); ?>
-						</div>
-						<div>
-							<?php echo $page_item->post_title ; ?>
+				<div class="col col-md-4 col-sm-6 page-index">
+				  <div class="page-index-border">
+            <a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>">
+              <div class='images'>
+                <?php 
+                  if(get_the_post_thumbnail($page_item->ID,'thumbnail')) {
+                    echo get_the_post_thumbnail($page_item->ID,'thumbnail');
+                  } else {
+                ?>
+                  <img src="<?php bloginfo('template_directory'); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" />
+                <?php 
+                  }
+                ?>
+              </div>
+              <div class='title'>
+                <h3><?php echo $page_item->post_title ; ?></h3>
+              </div>
 						</div>
 					</a>
 				</div>

@@ -27,7 +27,6 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
         <?php
           the_custom_logo();
         ?>
@@ -55,6 +54,6 @@
     <?php 
       if(!is_404() && !preg_match("/สมัครสมาชิก/", urldecode($_SERVER['REQUEST_URI'])))
         echo do_shortcode('[twabc-carousel]');
-     ?>
+    ?>
 
 	</header><!-- #masthead -->
