@@ -157,3 +157,8 @@ nav button:focus {
 .collapse:not(.show) {
   display: block;
 }
+
+.carousel-inner>.item>img,
+.carousel-inner>.next {
+  width: 100% !important;
+}
