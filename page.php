@@ -7,9 +7,6 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package underscores
  */
 
 get_header();

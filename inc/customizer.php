@@ -2,7 +2,6 @@
 /**
  * underscores Theme Customizer
  *
- * @package underscores
  */
 
 /**

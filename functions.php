@@ -2,9 +2,6 @@
 /**
  * underscores functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package underscores
  */
 
 if ( ! defined( '_S_VERSION' ) ) {

@@ -54,7 +54,7 @@ a {
   color: #fff;
 }
 
-.site-main .container {
+.site-main .container, .page .container {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 50px 50px;
 }

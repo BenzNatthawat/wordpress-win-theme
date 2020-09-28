@@ -4,7 +4,6 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package underscores
  */
 
 if ( ! function_exists( 'underscores_posted_on' ) ) :
